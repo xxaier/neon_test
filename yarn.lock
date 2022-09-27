@@ -19,12 +19,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iuser/node-loader@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@iuser/node-loader@npm:0.0.21"
+"@iuser/node-loader@npm:^0.0.25":
+  version: 0.0.25
+  resolution: "@iuser/node-loader@npm:0.0.25"
   dependencies:
     coffee_plus: ^0.0.39
-  checksum: f51f3c187dd5f2cfa12aea967e5fc4d2e9b202498358e6faae5cdcb85de1f4cdc9c57df1f2368415eccc52b04556af02ec9bb918418bb67f9b9b718b7947b896
+  checksum: 026f35cf4543eb120ef2a64cafd4828d367f057ebd24f4b74a914b16e1d1ad79db4883e9655e169d56c3741f783ece85416e4fcfc292c38d9eee7df24317bf2e
   languageName: node
   linkType: hard
 
@@ -109,7 +109,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@user.tax/rust@workspace:."
   dependencies:
-    "@iuser/node-loader": ^0.0.21
+    "@iuser/node-loader": ^0.0.25
     "@napi-rs/cli": ^2.11.4
     ava: ^4.3.3
   languageName: unknown
