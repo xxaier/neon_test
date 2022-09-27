@@ -18,7 +18,7 @@
   },
   "license": "(BUSL-1.1 OR SSPL-1.0)",
   "devDependencies": {
-    "@iuser/node-loader": "^0.0.21",
+    "@iuser/node-loader": "^0.0.25",
     "@napi-rs/cli": "^2.11.4",
     "ava": "^4.3.3"
   },
