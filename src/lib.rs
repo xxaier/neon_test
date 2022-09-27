@@ -69,7 +69,6 @@ pub fn zip_u64(li: Vec<i64>) -> Uint8Array {
 
 #[napi]
 pub fn unzip_u64(li: Uint8Array, len: i64) -> Vec<i64> {
-  dbg!(&li[..], len);
   let mut decoded = vec![0; len as usize];
   stream_vbyte64::decode(&mut decoded, &li[..]);
   decoded.into_iter().map(|i| i as i64).collect()
