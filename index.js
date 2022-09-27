@@ -236,20 +236,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { z85Dump, z85Load, ipBin, binU64, u64Bin, zipU64, unzipU64, b64, unb64, blake3Round, blake3, xxh3, encrypt, decrypt, randomBytes } = nativeBinding
+const { binU64, u64Bin } = nativeBinding
 
-module.exports.z85Dump = z85Dump
-module.exports.z85Load = z85Load
-module.exports.ipBin = ipBin
 module.exports.binU64 = binU64
 module.exports.u64Bin = u64Bin
-module.exports.zipU64 = zipU64
-module.exports.unzipU64 = unzipU64
-module.exports.b64 = b64
-module.exports.unb64 = unb64
-module.exports.blake3Round = blake3Round
-module.exports.blake3 = blake3
-module.exports.xxh3 = xxh3
-module.exports.encrypt = encrypt
-module.exports.decrypt = decrypt
-module.exports.randomBytes = randomBytes

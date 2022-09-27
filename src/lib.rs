@@ -9,5 +9,5 @@ pub fn bin_u64(bin: Uint8Array) -> i64 {
 
 #[napi]
 pub fn u64_bin(i: i64) -> Uint8Array {
-  (i as u64).to_variable_vec().unwrap().into()
+  Uint8Array::new((i as u64).to_variable_vec().unwrap())
 }
