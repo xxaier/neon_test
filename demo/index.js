@@ -1,10 +1,16 @@
 #!/usr/bin/env -S node --es-module-specifier-resolution=node --trace-uncaught --expose-gc --unhandled-rejections=strict
-var n;
+var n, sleep;
 
 import {
   i64Bin,
   binI64
 } from "..";
+
+sleep = () => {
+  return new Promise((resolve) => {
+    return setTimeout(resolve, 1);
+  });
+};
 
 n = 0;
 
@@ -16,6 +22,7 @@ while (true) {
   binI64(i64Bin(-1));
   binI64(i64Bin(-256));
   binI64(i64Bin(-1024));
+  await sleep();
   gc();
   if (n % 1000 === 0) {
     console.log('memoryUsage', n, process.memoryUsage());
