@@ -8,7 +8,7 @@ import {
 
 sleep = () => {
   return new Promise((resolve) => {
-    return setTimeout(resolve, 1);
+    return setTimeout(resolve, 1000);
   });
 };
 
@@ -22,9 +22,9 @@ while (true) {
   binI64(i64Bin(-1));
   binI64(i64Bin(-256));
   binI64(i64Bin(-1024));
-  await sleep();
-  gc();
   if (n % 1000 === 0) {
+    await sleep();
+    gc();
     console.log('memoryUsage', n, process.memoryUsage());
   }
   n += 1;

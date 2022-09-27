@@ -5,7 +5,7 @@ import { i64Bin, binI64 } from ".."
 sleep = =>
   new Promise(
     (resolve) =>
-      setTimeout(resolve, 1)
+      setTimeout(resolve, 1000)
   )
 
 n = 0
@@ -18,9 +18,9 @@ loop
   binI64 i64Bin -256
   binI64 i64Bin -1024
 
-  await sleep()
-  gc()
   if n%1000 == 0
+    await sleep()
+    gc()
     console.log 'memoryUsage', n, process.memoryUsage()
   n += 1
 
