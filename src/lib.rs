@@ -25,7 +25,7 @@ pub fn z85_dump(bin: Bin) -> String {
 }
 
 #[napi]
-pub fn z85_load(s: String) -> Result<Uint8Array> {
+pub fn z85_load(s: Bin) -> Result<Uint8Array> {
   Ok(z85::decode(s)?.into())
 }
 
