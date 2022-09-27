@@ -1,16 +1,16 @@
 #!/usr/bin/env coffee
 
-import { i64Bin, binU64 } from ".."
+import { i64Bin, binI64 } from ".."
 
 n = 0
 loop
-  binU64 i64Bin 1024
-  binU64 i64Bin 256
-  binU64 i64Bin 255
-  binU64 i64Bin 1
-  binU64 i64Bin -1
-  binU64 i64Bin -256
-  binU64 i64Bin -1024
+  binI64 i64Bin 1024
+  binI64 i64Bin 256
+  binI64 i64Bin 255
+  binI64 i64Bin 1
+  binI64 i64Bin -1
+  binI64 i64Bin -256
+  binI64 i64Bin -1024
 
   gc()
   if n%1000 == 0
