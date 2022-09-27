@@ -236,7 +236,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { binU64, u64Bin } = nativeBinding
+const { binU64, i64Bin } = nativeBinding
 
 module.exports.binU64 = binU64
-module.exports.u64Bin = u64Bin
+module.exports.i64Bin = i64Bin
