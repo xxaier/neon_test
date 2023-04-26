@@ -8,10 +8,10 @@ homepage = "https://github.com/user-tax-dev/rust"
 crate-type = ["cdylib"]
 
 [dependencies]
-anyhow = "1.0.65"
-napi = { version = "2.9.1", default-features = false, features = ["napi8","async","error_anyhow","tokio_net","tokio_rt"] }
-napi-sys = {version="2.2.2",features=["napi8"]}
-napi-derive = "2.9.1"
+anyhow = "1.0.70"
+napi = { version = "2.12.6", default-features = false, features = ["napi8","async","error_anyhow","tokio_net","tokio_rt"] }
+napi-sys = {version="2.2.3",features=["napi8"]}
+napi-derive = "2.12.4"
 #base64-simd = "0.7.0"
 #blake3 = "1.3.1"
 #ordered-varint = "1.0.1"
