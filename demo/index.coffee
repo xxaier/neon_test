@@ -25,7 +25,7 @@ loop
   if n%1000 == 0
     await sleep()
     gc()
-    leak = parseInt((process.memoryUsage().rss-rss)/1024/1024)
+    leak = parseInt((process.memoryUsage().rss-rss)*100/1024/1024)/100
 
     console.log 'loop', n, 'leak', leak+' MB'
   n += 1
