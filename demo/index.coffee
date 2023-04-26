@@ -1,6 +1,8 @@
 #!/usr/bin/env coffee
 
-import { i64Bin, binI64 } from ".."
+import * as rust from "../index.js"
+
+{ i64Bin, binI64 } = rust
 
 sleep = =>
   new Promise(
