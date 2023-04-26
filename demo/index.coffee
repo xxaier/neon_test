@@ -10,6 +10,8 @@ sleep = =>
       setTimeout(resolve, 1000)
   )
 
+{rss} = process.memoryUsage()
+
 n = 0
 loop
   binI64 i64Bin 1024
@@ -23,7 +25,9 @@ loop
   if n%1000 == 0
     await sleep()
     gc()
-    console.log 'n=', n, 'memoryUsage', process.memoryUsage()
+    leak = parseInt((process.memoryUsage().rss-rss)/1024/1024)
+
+    console.log 'loop', n, 'leak', leak+' MB'
   n += 1
 
 
