@@ -23,7 +23,7 @@ loop
   if n%1000 == 0
     await sleep()
     gc()
-    console.log 'memoryUsage', n, process.memoryUsage()
+    console.log 'n=', n, 'memoryUsage', process.memoryUsage()
   n += 1
 
 
