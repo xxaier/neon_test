@@ -13,6 +13,8 @@ sleep = =>
 {rss} = process.memoryUsage()
 
 n = 0
+pre_leak = 0
+
 loop
   binI64 i64Bin 1024
   binI64 i64Bin 256
@@ -26,8 +28,9 @@ loop
     await sleep()
     gc()
     leak = parseInt((process.memoryUsage().rss-rss)*100/1024/1024)/100
-
-    console.log 'loop', n, 'leak', leak+' MB'
+    if leak != pre_leak
+      pre_leak = leak
+      console.log 'loop', n, 'leak', leak+' MB'
   n += 1
 
 
